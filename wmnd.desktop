@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=wmnd
+Comment=Network Monitor
+Comment[pl]=Monitor Sieci
+Exec=wmnd
+Terminal=false
+Type=Application
