@@ -2,7 +2,7 @@ Summary:	Network monitoring dock app
 Summary(pl):	Aplet monitoruj±cy sieæ
 Name:		wmnd
 Version:	0.4.9
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	ftp://ftp.yuv.info/pub/wmnd/releases/%{name}-%{version}.tar.gz
@@ -23,6 +23,7 @@ zarz±dców okien, monitoruj±cym interfejsy sieciowe.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure
