@@ -1,0 +1,11 @@
+diff -urN wmnd-0.4.7/src/wmnd.c wmnd-0.4.7-etc/src/wmnd.c
+--- wmnd-0.4.7/src/wmnd.c	Wed Jun  4 09:48:32 2003
++++ wmnd-0.4.7-etc/src/wmnd.c	Thu Nov 27 21:51:07 2003
+@@ -273,6 +273,7 @@
+   int exist;
+ 
+   fp = fopen(filename, "r");
++  if(!fp) fp = fopen("/etc/X11/wmndrc", "r");
+ 
+   if(fp)
+   {
