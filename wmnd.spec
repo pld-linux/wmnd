@@ -1,6 +1,6 @@
 # TODO: move config file to /etc or /etc/X11
 Summary:	Network monitoring dock app
-Summary(pl):	Aplet monitourj±cy sieæ
+Summary(pl):	Aplet monitoruj±cy sieæ
 Name:		wmnd
 Version:	0.4.7
 Release:	0.1
@@ -11,9 +11,6 @@ Source0:	ftp://ftp.yuv.info/pub/wmnd/releases/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 URL:		http://www.yuv.info/wmnd/
 BuildRequires:	XFree86-devel
-BuildRequires:	xpm-devel
-Requires:	XFree86-libs
-Requires:	xpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -22,7 +19,7 @@ and other compatible window managers.
 
 %description -l pl
 WMND jest dokowalnym apletem dla WindowMakera i innych kompatybilnych
-menad¿erów okien, monitoruj±cym interfejsy sieciowe.
+zarz±dców okien, monitoruj±cym interfejsy sieciowe.
 
 %prep
 %setup -q
