@@ -6,6 +6,6 @@ Comment[pl]=Monitor Sieci
 Exec=wmnd
 Terminal=false
 Type=Application
-Categories=X-Docklet;
+Categories=Applet;
 NotShowIn=GNOME;KDE;
 # vi: encoding=utf-8
