@@ -9,6 +9,7 @@ Group:		X11/Window Managers/Tools
 Source0:	ftp://ftp.yuv.info/pub/wmnd/releases/%{name}-%{version}.tar.gz
 # Source0-md5:	3378ba18557dd4477b278e4144bf32c2
 Source1:	%{name}.desktop
+Patch0:		%{name}-etc.patch
 URL:		http://www.yuv.info/wmnd/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,19 +31,21 @@ zarz±dców okien, monitoruj±cym interfejsy sieciowe.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+install -d $RPM_BUILD_ROOT{%{_sysconfdir}/X11,%{_applnkdir}/DockApplets}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+mv $RPM_BUILD_ROOT%{_datadir}/wmndrc \
+	$RPM_BUILD_ROOT%{_sysconfdir}/X11
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %post
 echo
-echo "Check config file: %{_datadir}/wmndrc"
+echo "Check config file: %{_sysconfdir}/X11/wmndrc"
 echo
 
 %files
@@ -51,4 +54,4 @@ echo
 %attr(755,root,root) %{_bindir}/%{name}
 %{_mandir}/man1/*
 %{_applnkdir}/DockApplets/*
-%config %{_datadir}/wmndrc
+%config %{_sysconfdir}/X11/wmndrc
