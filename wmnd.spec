@@ -2,7 +2,7 @@ Summary:	Network monitoring dock app
 Summary(pl):	Aplet monitoruj±cy sieæ
 Name:		wmnd
 Version:	0.4.8
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	ftp://ftp.yuv.info/pub/wmnd/releases/%{name}-%{version}.tar.gz
@@ -30,12 +30,12 @@ zarz±dców okien, monitoruj±cym interfejsy sieciowe.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_sysconfdir}/X11,%{_applnkdir}/DockApplets}
+install -d $RPM_BUILD_ROOT{%{_sysconfdir}/X11,%{_desktopdir}/docklets}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/docklets
 mv -f $RPM_BUILD_ROOT%{_datadir}/wmndrc $RPM_BUILD_ROOT%{_sysconfdir}/X11
 
 %clean
@@ -51,5 +51,5 @@ echo
 %doc examples/wmndrc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/%{name}
 %{_mandir}/man1/*
-%{_applnkdir}/DockApplets/*
+%{_desktopdir}/docklets/*
 %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/X11/wmndrc
