@@ -53,4 +53,4 @@ echo
 %attr(755,root,root) %{_bindir}/%{name}
 %{_mandir}/man1/*
 %{_desktopdir}/docklets/*
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/X11/wmndrc
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/X11/wmndrc
