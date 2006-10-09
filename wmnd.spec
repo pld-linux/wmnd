@@ -5,7 +5,7 @@ Version:	0.4.11
 Release:	1
 License:	GPL
 Group:		X11/Window Managers/Tools
-Source0:	ftp://ftp.yuv.info/pub/wmnd/releases/%{name}-%{version}.tar.gz
+Source0:	http://www.yuv.info/wmnd/releases/%{name}-%{version}.tar.gz
 # Source0-md5:	f7a57fa5b610373326007b43e341a85c
 Source1:	%{name}.desktop
 Patch0:		%{name}-etc.patch
