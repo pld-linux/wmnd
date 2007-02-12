@@ -1,5 +1,5 @@
 Summary:	Network monitoring dock app
-Summary(pl.UTF-8):   Aplet monitorujący sieć
+Summary(pl.UTF-8):	Aplet monitorujący sieć
 Name:		wmnd
 Version:	0.4.11
 Release:	1
