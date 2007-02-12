@@ -1,5 +1,5 @@
 Summary:	Network monitoring dock app
-Summary(pl):	Aplet monitoruj±cy sieæ
+Summary(pl.UTF-8):   Aplet monitorujÄ…cy sieÄ‡
 Name:		wmnd
 Version:	0.4.11
 Release:	1
@@ -17,9 +17,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 WMND is a dockapp for monitoring network interfaces under WindowMaker
 and other compatible window managers.
 
-%description -l pl
+%description -l pl.UTF-8
 WMND jest dokowalnym apletem dla WindowMakera i innych kompatybilnych
-zarz±dców okien, monitoruj±cym interfejsy sieciowe.
+zarzÄ…dcÃ³w okien, monitorujÄ…cym interfejsy sieciowe.
 
 %prep
 %setup -q
